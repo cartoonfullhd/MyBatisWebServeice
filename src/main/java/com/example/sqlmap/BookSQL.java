@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import com.example.object.Book;
 
@@ -36,4 +37,11 @@ public interface BookSQL
 			+ " WHERE NAME = #{nameBook} ";
 	@Delete(SQL_Delete_BookResult_ByName)
 	public Integer deleteBookResultByName(@Param("nameBook") String nameBook);
+	
+	public static final String SQL_Update_BookResult_ById=""
+			+ " UPDATE BOOK"
+			+ "	SET NAME = #{bk.name}, AUTHOR = #{bk.author}"
+			+ " WHERE ID = #{bk.id}";
+	@Update(SQL_Update_BookResult_ById)
+	public Integer updateBookResultById(@Param("bk") Book booktest);
 }
