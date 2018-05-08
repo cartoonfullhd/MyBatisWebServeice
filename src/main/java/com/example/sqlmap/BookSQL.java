@@ -34,6 +34,6 @@ public interface BookSQL
 			+ " DELETE "
 			+ " FROM Book "
 			+ " WHERE NAME = #{nameBook} ";
-	/*@Delete(SQL_Delete_BookResult_ByName)
-	public Integer deleteBookResultByName(@Param("nameBook") String nameBook);*/
+	@Delete(SQL_Delete_BookResult_ByName)
+	public Integer deleteBookResultByName(@Param("nameBook") String nameBook);
 }
