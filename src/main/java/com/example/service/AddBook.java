@@ -13,11 +13,11 @@ public class AddBook
 	BookSQL bookSql;
 	public int result;
 	
-	Book cartoon = new Book("Detective Conan", "Gosho Aoyama");
-	Book history = new Book("World War II", "Hitler");
+	//Book cartoon = new Book("Detective Conan", "Gosho Aoyama");
+	//Book history = new Book("World War II", "Hitler");
 	
-	public int getResult()
+	public int getResult(Book book)
 	{
-		return result = bookSql.addBookResult(cartoon) + bookSql.addBookResult(history);
+		return result = bookSql.addBookResult(book);
 	}
 }
