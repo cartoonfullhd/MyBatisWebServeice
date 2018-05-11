@@ -36,9 +36,9 @@ public class BookRest
 	}
 	
 	@DeleteMapping(path="/deleteBook")
-	public int deleteBookResult(@RequestParam(value="name", required = true) String name)
+	public int deleteBookResult(@RequestParam(value="id", required = true) int id)
 	{
-		return bookSql.deleteBookResultByName(name);
+		return bookSql.deleteBookResultByID(id);
 	}
 	
 	@PutMapping(path="/updateBook")

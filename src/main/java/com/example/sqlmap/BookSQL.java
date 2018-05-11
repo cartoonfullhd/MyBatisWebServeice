@@ -31,12 +31,12 @@ public interface BookSQL
 	@Select(SQL_Select_All_BookResult)
 	public List<Book> getAllBookResult();
 	
-	public static final String SQL_Delete_BookResult_ByName=""
+	public static final String SQL_Delete_BookResult_ByID=""
 			+ " DELETE "
 			+ " FROM Book "
-			+ " WHERE NAME = #{nameBook} ";
-	@Delete(SQL_Delete_BookResult_ByName)
-	public Integer deleteBookResultByName(@Param("nameBook") String nameBook);
+			+ " WHERE ID = #{idBook} ";
+	@Delete(SQL_Delete_BookResult_ByID)
+	public Integer deleteBookResultByID(@Param("idBook") int idBook);
 	
 	public static final String SQL_Update_BookResult_ById=""
 			+ " UPDATE BOOK"
